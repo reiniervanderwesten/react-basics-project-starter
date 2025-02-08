@@ -43,22 +43,33 @@ export const RecipeListPage = ({clickFn}) => {
   return (
     <Flex h="fit-content"  w="100vw" flexDir={'column'}  >
       <Heading ml= {2} mt={6} mb= {6} alignSelf={'center'}>Your Recipe App</Heading>
+      <Input variant={'outline'} w={300} m={4} alignSelf={'center'} width= {50} placeholder="search on name" onChange={handleChange}></Input>
+      {(matchedRecipes=='')?(
+          <Heading alignSelf={'center'} mt={10} fontSize= {80} color={"red.400"}>no recipe found!</Heading>
 
-      <Flex gap={8} flexDir={{ base: 'column', sm: 'row'}} flexWrap={'wrap'} alignContent={{base: 'center', sm: 'flex-start', md: 'flex-start'}} >
+        ):(
+          <Flex gap={8} ml={4} flexDir={{ base: 'column', sm: 'row'}} flexWrap={'wrap'} alignContent={{base: 'center', sm: 'flex-start', md: 'flex-start'}} >
 
         {matchedRecipes.map((recept)=>(
           <RecipeItemCard key={recept.recipe.label} recipe={recept.recipe} clickFn={clickFn}/>
 
         ))}
+          </Flex>
+        )
+      
+    
+      }
+      
+      
         
         
 
-
-      </Flex>
 
       
 
-      <Input w={'200'} mt={'10'} placeholder="search on name" onChange={handleChange}></Input>
+      
+
+      
       
       
       
