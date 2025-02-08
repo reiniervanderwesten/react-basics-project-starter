@@ -1,4 +1,13 @@
 import {Center, Flex, Heading, Button, Image, Text, Tag } from "@chakra-ui/react";
+import {
+    Table,
+    Thead,
+    Tbody,
+    Tr,
+    Th,
+    Td,
+    TableCaption,
+  } from "@chakra-ui/react"
 
 export const RecipePage=({choice, clickFn})=>{
     const ingredienten= choice.ingredientLines.join(', ');
@@ -32,14 +41,52 @@ export const RecipePage=({choice, clickFn})=>{
 
                 </Flex>
                 <Text>{ingredienten}</Text>
-                <Text>Servings: {choice.yield}</Text>
-                <Text>
-                Enerc_Kcal: {choice.totalNutrients.ENERC_KCAL .quantity.toFixed(0)}, protein: { choice.totalNutrients.PROCNT.quantity.toFixed(0)},  
-                 fat: {choice.totalNutrients.FAT.quantity.toFixed(0)}, carbs: {choice.totalNutrients.CHOCDF.quantity.toFixed(0)}, 
-                 cholesterol: {choice.totalNutrients.CHOLE.quantity.toFixed(0)}, sodium: {choice.totalNutrients.NA.quantity.toFixed(0)}.
+                <Text>Servings: {choice.yield}</Text>                
+                  
+                  
+                 
 
 
-                </Text>
+                
+
+                <Table variant={'simple'} colorScheme={'brand'}>
+                    <TableCaption>Energiehoeveelheden</TableCaption>
+                    <Thead>
+                        <Tr>
+                            <Th>Voedingsstof</Th>
+                            <Th>energie</Th>
+                        </Tr>
+                    </Thead>
+                    <Tbody>
+                        <Tr>
+                            <Td>Enerc_Kcal</Td>
+                            <Td>{choice.totalNutrients.ENERC_KCAL .quantity.toFixed(0)}</Td>
+                        </Tr>
+                        <Tr>
+                            <Td>protein</Td>
+                            <Td>{ choice.totalNutrients.PROCNT.quantity.toFixed(0)}</Td>
+                        </Tr>
+                        <Tr>
+                            <Td>fat</Td>
+                            <Td>{choice.totalNutrients.FAT.quantity.toFixed(0)}</Td>
+                        </Tr>
+                        <Tr>
+                            <Td>Carbs</Td>
+                            <Td>{choice.totalNutrients.CHOCDF.quantity.toFixed(0)}</Td>
+                        </Tr>
+                        <Tr>
+                            <Td>cholesterol</Td>
+                            <Td>{choice.totalNutrients.CHOLE.quantity.toFixed(0)}</Td>
+                        </Tr>
+                        <Tr>
+                            <Td>Sodium</Td>
+                            <Td>{choice.totalNutrients.NA.quantity.toFixed(0)}</Td>
+                        </Tr>
+                        
+                    </Tbody>
+
+                </Table>
+   
             
                 
             </Flex>
