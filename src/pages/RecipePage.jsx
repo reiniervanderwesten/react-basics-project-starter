@@ -34,9 +34,9 @@ export const RecipePage=({choice, clickFn})=>{
                 <Text>{ingredienten}</Text>
                 <Text>Servings: {choice.yield}</Text>
                 <Text>
-                Enerc_Kcal: {choice.totalNutrients.ENERC_KCAL .quantity}, protein: { choice.totalNutrients.PROCNT.quantity},  
-                 fat: {choice.totalNutrients.FAT.quantity}, carbs: {choice.totalNutrients.CHOCDF.quantity}, 
-                 cholesterol: {choice.totalNutrients.CHOLE.quantity}, sodium: {choice.totalNutrients.NA.quantity}.
+                Enerc_Kcal: {choice.totalNutrients.ENERC_KCAL .quantity.toFixed(0)}, protein: { choice.totalNutrients.PROCNT.quantity.toFixed(0)},  
+                 fat: {choice.totalNutrients.FAT.quantity.toFixed(0)}, carbs: {choice.totalNutrients.CHOCDF.quantity.toFixed(0)}, 
+                 cholesterol: {choice.totalNutrients.CHOLE.quantity.toFixed(0)}, sodium: {choice.totalNutrients.NA.quantity.toFixed(0)}.
 
 
                 </Text>
