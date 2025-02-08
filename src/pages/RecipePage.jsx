@@ -4,7 +4,7 @@ export const RecipePage=({choice, clickFn})=>{
     const ingredienten= choice.ingredientLines.join(', ');
 
     return(
-        <Center gap={5} flexDir={'column'} h={'fit-content'} w={{sm: 'full', md: '50 vw'}}>
+        <Center gap={5} flexDir={'column'} h={'fit-content'} ml= {3} mt={4} pt= {2} w={{sm:'full', md: '50vw'}}>
             <Image src={choice.image} w={{base: 300, sm: 500, md: 700}} h={{base: 300, sm: 500, md:700}} borderRadius={'md'}/> 
             <Heading>Your choice: {choice.label}</Heading>
             <Flex gap={5} flexDir={"column"} flexWrap={'wrap'} w= {{base: '100%', sm: '50%', md: '50%'}} justify='center'>
