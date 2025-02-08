@@ -48,7 +48,7 @@ export const RecipeListPage = ({clickFn}) => {
           <Heading alignSelf={'center'} mt={10} fontSize= {80} color={"red.400"}>no recipe found!</Heading>
 
         ):(
-          <Flex gap={8} ml={4} flexDir={{ base: 'column', sm: 'row'}} flexWrap={'wrap'} alignContent={{base: 'center', sm: 'flex-start', md: 'flex-start'}} >
+          <Flex gap={8} ml={4} flexDir={{ base: 'column', sm: 'column', md: 'row'}} flexWrap={'wrap'} alignContent={{base: 'center', sm: 'flex-start', md: 'flex-start'}} >
 
         {matchedRecipes.map((recept)=>(
           <RecipeItemCard key={recept.recipe.label} recipe={recept.recipe} clickFn={clickFn}/>
@@ -58,8 +58,7 @@ export const RecipeListPage = ({clickFn}) => {
         )
       
     
-      }
-      
+      }   
       
         
         
