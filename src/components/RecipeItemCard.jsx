@@ -11,7 +11,7 @@ export const RecipeItemCard=({recipe, clickFn})=>{
                 borderRadius={'md'} 
                 padding={2}
             />
-            <Heading size={'md'} color= {{base: 'red', sm: 'green', md: 'blue', lg: 'red.300'}} margin={3}> {recipe.label}</Heading>
+            <Heading size={'md'} color= {{base: 'red', sm: 'green', md: 'blue', lg: 'red.400'}} margin={3}> {recipe.label}</Heading>
             <Flex gap={6} flexDir={'row'}>  
                 {recipe.dietLabels.map((dietLabel)=>(
                     <Tag bg={'green.200'} p={2} key={dietLabel}>{dietLabel}</Tag>
