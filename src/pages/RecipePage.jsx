@@ -24,18 +24,18 @@ export const RecipePage=({choice, clickFn})=>{
                 <Text>Cooking Time: {choice.totalTime} minutes</Text>
                 <Flex gap={6}  flexDir={'row'}  flexWrap={'wrap'} justify={'flex-start'}>
                 {choice.dietLabels.map((dietLabel)=>(
-                    <Tag bg={'green.200'}  p={1} key={dietLabel}>{dietLabel}</Tag>
+                    <Tag bg={'green.200'}  w= 'fit-content' p={1} key={dietLabel}>{dietLabel}</Tag>
                 ))}
                     
                 </Flex>
                 <Flex gap={6}  flexDir={'row'} flexWrap={'wrap'} justify={'flex-start'}>
                 {choice.healthLabels.map((healthLabel)=>(
-                    <Tag bg={'blue.200'} p={2} key={healthLabel}>{healthLabel}</Tag>
+                    <Tag bg={'blue.200'} w= 'fit-content'p={2} key={healthLabel}>{healthLabel}</Tag>
                 ))}
                 </Flex>
                 <Flex gap={6}  flexDir={'row'}  flexWrap={'wrap'} justify={'flex-start'}>
                 {choice.cautions.map((caution)=>(
-                    <Tag bg={'red.400'} p={2} key={caution}>{caution}</Tag>
+                    <Tag bg={'red.400'} w='fit-content' p={2} key={caution}>{caution}</Tag>
                 ))}
                 
 
