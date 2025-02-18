@@ -14,26 +14,26 @@ export const RecipePage=({choice, clickFn})=>{
 
     return(
         
-        <Center gap={5} flexDir={'column'} h={'fit-content'} ml= {3} mt={4} pt= {2} w={{base: 'full', sm:'full', md: '50vw'}}>
+        <Center overflow= 'hidden' gap={5}  flexDir={'column'} h={'fit-content'} ml= {3} mt={4} pt= {2} w={{base: 'full', sm:'full', md: '50vw'}}>
             <Button m= {2} alignSelf={'start'} onClick={()=>clickFn()}>Resetten</Button>
             <Image src={choice.image} w={{base: 200, sm: 300, md: 500, lg: 700}} h={{base: 200, sm: 300, md: 500, lg:700}} borderRadius={'md'}/> 
-            <Heading>Your choice: {choice.label}</Heading>
-            <Flex gap={5} flexDir={"column"} flexWrap={'wrap'} w= {{base: '100%', sm: '100%', md: '50%'}} justify='center'>
+            <Heading maxWidth='90%'>Your choice: {choice.label}</Heading>
+            <Flex gap={5} flexDir={"column"} flexWrap={'wrap'} w= {{base: '90%', sm: '90%', md: '50%'}} justify='center'>
                 <Text>{choice.mealType}</Text>
                 <Text>{choice.dishType}</Text>
                 <Text>Cooking Time: {choice.totalTime} minutes</Text>
-                <Flex gap={6} flexDir={'row'} flexWrap={'wrap'} justify={'flex-start'}>
+                <Flex gap={6}  flexDir={'row'} flexWrap={'wrap'} justify={'flex-start'}>
                 {choice.dietLabels.map((dietLabel)=>(
                     <Tag bg={'green.200'} p={2} key={dietLabel}>{dietLabel}</Tag>
                 ))}
                     
                 </Flex>
-                <Flex gap={6} flexDir={'row'} flexWrap={'wrap'} justify={'flex-start'}>
+                <Flex gap={6}  flexDir={'row'} flexWrap={'wrap'} justify={'flex-start'}>
                 {choice.healthLabels.map((healthLabel)=>(
                     <Tag bg={'blue.200'} p={2} key={healthLabel}>{healthLabel}</Tag>
                 ))}
                 </Flex>
-                <Flex gap={6} flexDir={'row'} flexWrap={'wrap'} justify={'flex-start'}>
+                <Flex gap={6}  flexDir={'row'} flexWrap={'wrap'} justify={'flex-start'}>
                 {choice.cautions.map((caution)=>(
                     <Tag bg={'red.400'} p={2} key={caution}>{caution}</Tag>
                 ))}
