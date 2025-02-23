@@ -14,33 +14,33 @@ export const RecipePage=({choice, clickFn})=>{
 
     return(
         
-        <Center   overflow='hidden' gap={5}  flexDir={'column'} h={'fit-content'} ml= {3} mt={4} pt={2} w={{base: 'full', sm:'full', md: '50vw'}}>
+        <Center    gap={5}  flexDir={'column'} h={'fit-content'} color= {{base: 'red', sm: 'green', md: 'blue'}} margin= {{base: 0.5, sm: 0.75, md: 1}} mt={4} padding={2} w={{base: 'full', sm:'full', md: '75%', lg: '50%'}}>
             <Button m= {2} alignSelf={'start'} onClick={()=>clickFn()}>Resetten</Button>
-            <Image src={choice.image} w={{base: 200, sm: 300, md: 500, lg: 700}} h={{base: 200, sm: 300, md: 500, lg:700}} borderRadius={'md'}/> 
-            <Heading maxWidth='90%'>Your choice: {choice.label}</Heading>
-            <Flex gap={5} flexDir={"column"} flexWrap={'wrap'} w= {{base: '100%', sm: '100%', md: '50%'}} justify='center' boxSizing='border-box'>
+            <Image src={choice.image} w={{base: 100, sm: 200, md: 400, lg: 700}} scale={{base: 'auto'}}/> 
+            <Heading maxWidth='100%'>Your choice: {choice.label}</Heading>
+            <Flex  ml= {0} gap={5} flexDir={"column"} flexWrap={'wrap'}  w= {{base: '100%', sm: '100%', md: '50%'}} justify='center' boxSizing='border-box'>
                 <Text>{choice.mealType}</Text>
                 <Text>{choice.dishType}</Text>
-                <Text>Cooking Time: {choice.totalTime} minutes</Text>
-                <Flex gap={6}  flexDir={'row'}  flexWrap={'wrap'} justify={'flex-start'}>
+                <Text maxWidth={'100%'}>Cooking Time: {choice.totalTime} minutes</Text>
+                <Flex gap={4}  flexDir={{base: 'column', sm:'row'}}  flexWrap={'wrap'} justify={'flex-start'}>
                 {choice.dietLabels.map((dietLabel)=>(
                     <Tag bg={'green.200'}  w= 'fit-content' p={1} key={dietLabel}>{dietLabel}</Tag>
                 ))}
                     
                 </Flex>
-                <Flex gap={6}  flexDir={'row'} flexWrap={'wrap'} justify={'flex-start'}>
+                <Flex gap={4}  flexDir={{base: 'column', sm: 'column', md: 'row'}} flexWrap={'wrap'} justify={'flex-start'}>
                 {choice.healthLabels.map((healthLabel)=>(
                     <Tag bg={'blue.200'} w= 'fit-content'p={2} key={healthLabel}>{healthLabel}</Tag>
                 ))}
                 </Flex>
-                <Flex gap={6}  flexDir={'row'}  flexWrap={'wrap'} justify={'flex-start'}>
+                <Flex gap={4}  flexDir={{base: 'column', sm: 'column', md: 'row'}}  flexWrap={'wrap'} justify={'flex-start'}>
                 {choice.cautions.map((caution)=>(
                     <Tag bg={'red.400'} w='fit-content' p={2} key={caution}>{caution}</Tag>
                 ))}
                 
 
                 </Flex>
-                <Text>{ingredienten}</Text>
+                <Text >{ingredienten}</Text>
                 <Text>Servings: {choice.yield}</Text>                
                   
                   
@@ -49,7 +49,7 @@ export const RecipePage=({choice, clickFn})=>{
 
                 
 
-                <Table variant={'simple'} colorScheme={'brand'}>
+                <Table maxWidth={'75%'} size={'sm'} variant={'simple'} colorScheme={'brand'}>
                     <TableCaption>Energiehoeveelheden</TableCaption>
                     <Thead>
                         <Tr>
