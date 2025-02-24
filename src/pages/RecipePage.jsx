@@ -14,7 +14,7 @@ export const RecipePage=({choice, clickFn})=>{
 
     return(
         
-        <Center    gap={5}  flexDir={'column'} h={'fit-content'} color= {{base: 'red', sm: 'green', md: 'blue'}} margin= {{base: 0.5, sm: 0.75, md: 1}} mt={4} padding={2} w={{base: 'full', sm:'full', md: '75%', lg: '50%'}}>
+        <Center    gap={5}  flexDir={'column'} h={'fit-content'} color= {{base: 'red', sm: 'green', md: 'blue'}} margin= {{base: 0.75, sm: 0.75, md: 1}} mt={4} padding={2} w={{base: 'full', sm:'full', md: '75%', lg: '50%'}}>
             <Button m= {2} alignSelf={'start'} onClick={()=>clickFn()}>Resetten</Button>
             <Image src={choice.image} w={{base: 100, sm: 200, md: 400, lg: 700}} scale={{base: 'auto'}}/> 
             <Heading maxWidth='100%'>Your choice: {choice.label}</Heading>
@@ -49,7 +49,7 @@ export const RecipePage=({choice, clickFn})=>{
 
                 
 
-                <Table maxWidth={'75%'} size={'sm'} variant={'simple'} colorScheme={'brand'}>
+                <Table maxWidth={'100%'} size={'sm'} variant={'simple'} colorScheme={'brand'}>
                     <TableCaption>Energiehoeveelheden</TableCaption>
                     <Thead>
                         <Tr>
