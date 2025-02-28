@@ -8,7 +8,7 @@ const theme=extendTheme({
   breakpoints: {
     base: '0px',
     sm: '320px',
-    md: '480gipx',
+    md: '480px',
     lg: '766px',
   },
 
