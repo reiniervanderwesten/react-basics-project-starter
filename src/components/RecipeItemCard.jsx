@@ -3,7 +3,7 @@ import {Card, Image, Heading, Text,Flex, Tag} from "@chakra-ui/react";
 export const RecipeItemCard=({recipe, clickFn})=>{
     const veg=recipe.healthLabels.filter((word)=>(word==="Vegetarian")||(word==="Vegan") );
     return(
-        <Card  justify={'center'} cursor={'pointer'} ml= {2} variant= 'outline' w= {'280px'} onClick={()=>clickFn(recipe)}>
+        <Card  justify={'center'} cursor={'pointer'} ml= {2} variant= 'outline'  onClick={()=>clickFn(recipe)}>
             <Image 
                 src={recipe.image} 
                 w={100} 
